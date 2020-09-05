@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:LoRA_USBStick-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -236,32 +237,6 @@ F 3 "" H 4820 2115 50  0001 C CNN
 	1    4820 2115
 	1    0    0    -1  
 $EndComp
-$Comp
-L LoRA_USBStick-rescue:Conn_01x04 J4
-U 1 1 5B0502EC
-P 6300 4805
-F 0 "J4" H 6300 5005 50  0000 C CNN
-F 1 "SWD" H 6300 4505 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 6300 4805 50  0001 C CNN
-F 3 "" H 6300 4805 50  0001 C CNN
-	1    6300 4805
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR012
-U 1 1 5B050850
-P 5955 4625
-F 0 "#PWR012" H 5955 4475 50  0001 C CNN
-F 1 "+3.3V" H 5955 4765 50  0000 C CNN
-F 2 "" H 5955 4625 50  0001 C CNN
-F 3 "" H 5955 4625 50  0001 C CNN
-	1    5955 4625
-	1    0    0    -1  
-$EndComp
-Text Label 5955 4905 2    60   ~ 0
-SWCLK
-Text Label 5955 4805 2    60   ~ 0
-SWDIO
 Text Label 6965 4065 0    60   ~ 0
 SWDIO
 Text Label 6965 3965 0    60   ~ 0
@@ -312,18 +287,6 @@ Wire Wire Line
 	4820 1660 4820 1535
 Wire Wire Line
 	4820 1535 4895 1535
-Wire Wire Line
-	6100 4905 5955 4905
-Wire Wire Line
-	5955 4805 6100 4805
-Wire Wire Line
-	6100 4705 5955 4705
-Wire Wire Line
-	5955 4705 5955 4625
-Wire Wire Line
-	5965 5080 5965 5005
-Wire Wire Line
-	5965 5005 6100 5005
 Wire Wire Line
 	7680 725  7680 825 
 $Comp
@@ -917,60 +880,27 @@ Wire Notes Line
 	11220 2510 11220 2505
 Wire Notes Line
 	11220 4565 11220 4560
-$Comp
-L power:GND #PWR014
-U 1 1 5B08A6AC
-P 5965 5080
-F 0 "#PWR014" H 5965 4830 50  0001 C CNN
-F 1 "GND" H 5965 4930 50  0000 C CNN
-F 2 "" H 5965 5080 50  0001 C CNN
-F 3 "" H 5965 5080 50  0001 C CNN
-	1    5965 5080
-	1    0    0    -1  
-$EndComp
 Text Label 6965 2665 0    60   ~ 0
 RFM_RST
 $Comp
 L power:GND #PWR015
 U 1 1 5B0C9EAC
-P 4805 5395
-F 0 "#PWR015" H 4805 5145 50  0001 C CNN
-F 1 "GND" H 4805 5245 50  0000 C CNN
-F 2 "" H 4805 5395 50  0001 C CNN
-F 3 "" H 4805 5395 50  0001 C CNN
-	1    4805 5395
+P 4780 6236
+F 0 "#PWR015" H 4780 5986 50  0001 C CNN
+F 1 "GND" H 4780 6086 50  0000 C CNN
+F 2 "" H 4780 6236 50  0001 C CNN
+F 3 "" H 4780 6236 50  0001 C CNN
+	1    4780 6236
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4805 5395 4805 5350
-Wire Wire Line
-	4905 5290 4905 5350
-Wire Wire Line
-	4905 5350 4805 5350
-Connection ~ 4805 5350
-Text Label 5205 4890 0    60   ~ 0
+Text Label 5528 5292 0    60   ~ 0
 D+
-Text Label 5205 4990 0    60   ~ 0
+Text Label 5528 5092 0    60   ~ 0
 D-
 Text Label 6965 3665 0    60   ~ 0
 D+
 Text Label 6965 3565 0    60   ~ 0
 D-
-$Comp
-L power:VBUS #PWR016
-U 1 1 5B0CB923
-P 5285 4630
-F 0 "#PWR016" H 5285 4480 50  0001 C CNN
-F 1 "VBUS" H 5285 4780 50  0000 C CNN
-F 2 "" H 5285 4630 50  0001 C CNN
-F 3 "" H 5285 4630 50  0001 C CNN
-	1    5285 4630
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5285 4630 5285 4690
-Wire Wire Line
-	5285 4690 5205 4690
 Text Notes 1165 935  0    60   ~ 0
 USB voltage regulator\n
 $Comp
@@ -1171,17 +1101,6 @@ NoConn ~ 6965 3865
 NoConn ~ 6965 1765
 NoConn ~ 6965 1865
 NoConn ~ 6965 1165
-$Comp
-L LoRA_USBStick-rescue:USB_B J10
-U 1 1 5B11F4BB
-P 4905 4890
-F 0 "J10" H 4705 5340 50  0000 L CNN
-F 1 "USB_B" H 4705 5240 50  0000 L CNN
-F 2 "Connectors:C46394" H 5055 4840 50  0001 C CNN
-F 3 "" H 5055 4840 50  0001 C CNN
-	1    4905 4890
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10750 1950 10750 2050
 Wire Wire Line
@@ -1191,13 +1110,9 @@ Wire Wire Line
 Wire Wire Line
 	4650 1255 4650 1385
 Wire Wire Line
-	4805 5350 4805 5290
-Wire Wire Line
 	2355 1330 2960 1330
 Wire Wire Line
 	1395 1330 1315 1330
-Wire Notes Line
-	8270 475  8270 6535
 Wire Notes Line
 	2290 2365 2290 6540
 NoConn ~ 6965 1565
@@ -1230,4 +1145,142 @@ Wire Wire Line
 Wire Wire Line
 	1565 1430 1565 1330
 Connection ~ 1565 1330
+$Comp
+L Connector:USB_C_Plug_USB2.0 P1
+U 1 1 5F54D8FB
+P 4928 5192
+F 0 "P1" H 5035 6059 50  0000 C CNN
+F 1 "USB_C_Plug_USB2.0" H 5035 5968 50  0000 C CNN
+F 2 "" H 5078 5192 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 5078 5192 50  0001 C CNN
+	1    4928 5192
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR016
+U 1 1 5B0CB923
+P 5607 4533
+F 0 "#PWR016" H 5607 4383 50  0001 C CNN
+F 1 "VBUS" H 5607 4683 50  0000 C CNN
+F 2 "" H 5607 4533 50  0001 C CNN
+F 3 "" H 5607 4533 50  0001 C CNN
+	1    5607 4533
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5607 4533 5607 4592
+Wire Wire Line
+	5607 4592 5528 4592
+Wire Wire Line
+	4628 6092 4628 6161
+Wire Wire Line
+	4628 6161 4780 6161
+Wire Wire Line
+	4928 6092 4928 6161
+Wire Wire Line
+	4780 6236 4780 6161
+Connection ~ 4780 6161
+Wire Wire Line
+	4780 6161 4928 6161
+$Comp
+L Device:R R2
+U 1 1 5F5760B6
+P 5834 4892
+F 0 "R2" V 5912 4893 50  0000 C CNN
+F 1 "5K1" V 5990 4899 50  0000 C CNN
+F 2 "" V 5764 4892 50  0001 C CNN
+F 3 "~" H 5834 4892 50  0001 C CNN
+	1    5834 4892
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5528 4792 5684 4792
+Wire Wire Line
+	5684 4892 5528 4892
+$Comp
+L power:GND #PWR011
+U 1 1 5F57D4B7
+P 6111 4904
+F 0 "#PWR011" H 6111 4654 50  0001 C CNN
+F 1 "GND" H 6111 4754 50  0000 C CNN
+F 2 "" H 6111 4904 50  0001 C CNN
+F 3 "" H 6111 4904 50  0001 C CNN
+	1    6111 4904
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5984 4892 6032 4892
+Wire Wire Line
+	6032 4792 5984 4792
+Wire Wire Line
+	6032 4892 6032 4837
+Wire Wire Line
+	6111 4904 6111 4837
+Wire Wire Line
+	6111 4837 6032 4837
+Connection ~ 6032 4837
+Wire Wire Line
+	6032 4837 6032 4792
+$Comp
+L LoRA_USBStick-rescue:Conn_01x04 J4
+U 1 1 5B0502EC
+P 7145 5321
+F 0 "J4" H 7145 5521 50  0000 C CNN
+F 1 "SWD" H 7145 5021 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 7145 5321 50  0001 C CNN
+F 3 "" H 7145 5321 50  0001 C CNN
+	1    7145 5321
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR012
+U 1 1 5B050850
+P 6800 5141
+F 0 "#PWR012" H 6800 4991 50  0001 C CNN
+F 1 "+3.3V" H 6800 5281 50  0000 C CNN
+F 2 "" H 6800 5141 50  0001 C CNN
+F 3 "" H 6800 5141 50  0001 C CNN
+	1    6800 5141
+	1    0    0    -1  
+$EndComp
+Text Label 6800 5421 2    60   ~ 0
+SWCLK
+Text Label 6800 5321 2    60   ~ 0
+SWDIO
+Wire Wire Line
+	6945 5421 6800 5421
+Wire Wire Line
+	6800 5321 6945 5321
+Wire Wire Line
+	6945 5221 6800 5221
+Wire Wire Line
+	6800 5221 6800 5141
+Wire Wire Line
+	6810 5596 6810 5521
+Wire Wire Line
+	6810 5521 6945 5521
+$Comp
+L power:GND #PWR014
+U 1 1 5B08A6AC
+P 6810 5596
+F 0 "#PWR014" H 6810 5346 50  0001 C CNN
+F 1 "GND" H 6810 5446 50  0000 C CNN
+F 2 "" H 6810 5596 50  0001 C CNN
+F 3 "" H 6810 5596 50  0001 C CNN
+	1    6810 5596
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8270 475  8270 6535
+$Comp
+L Device:R R1
+U 1 1 5F575919
+P 5834 4792
+F 0 "R1" V 5627 4792 50  0000 C CNN
+F 1 "5K1" V 5718 4792 50  0000 C CNN
+F 2 "" V 5764 4792 50  0001 C CNN
+F 3 "~" H 5834 4792 50  0001 C CNN
+	1    5834 4792
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

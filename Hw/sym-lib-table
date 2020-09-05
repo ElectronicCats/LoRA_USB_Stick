@@ -1,4 +1,6 @@
 (sym_lib_table
   (lib (name LoRA_USBStick-rescue)(type Legacy)(uri ${KIPRJMOD}/LoRA_USBStick-rescue.lib)(options "")(descr ""))
   (lib (name agroin)(type Legacy)(uri ${KIPRJMOD}/library/agroin.lib)(options "")(descr ""))
+  (lib (name electroniccats)(type Legacy)(uri /Users/montse/Documents/Mariamfigue/ElectronicCats-KiCad-Libraries/Libraries/electroniccats.lib)(options "")(descr ""))
+  (lib (name New_Library)(type Legacy)(uri /Users/montse/Documents/Mariamfigue/ElectronicCats-KiCad-Libraries/Footprints/Connectors.pretty/New_Library.lib)(options "")(descr ""))
 )
