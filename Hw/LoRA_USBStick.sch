@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:LoRA_USBStick-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -882,17 +881,6 @@ Wire Notes Line
 	11220 4565 11220 4560
 Text Label 6965 2665 0    60   ~ 0
 RFM_RST
-$Comp
-L power:GND #PWR015
-U 1 1 5B0C9EAC
-P 4780 6236
-F 0 "#PWR015" H 4780 5986 50  0001 C CNN
-F 1 "GND" H 4780 6086 50  0000 C CNN
-F 2 "" H 4780 6236 50  0001 C CNN
-F 3 "" H 4780 6236 50  0001 C CNN
-	1    4780 6236
-	1    0    0    -1  
-$EndComp
 Text Label 5528 5292 0    60   ~ 0
 D+
 Text Label 5528 5092 0    60   ~ 0
@@ -1171,17 +1159,6 @@ Wire Wire Line
 	5607 4533 5607 4592
 Wire Wire Line
 	5607 4592 5528 4592
-Wire Wire Line
-	4628 6092 4628 6161
-Wire Wire Line
-	4628 6161 4780 6161
-Wire Wire Line
-	4928 6092 4928 6161
-Wire Wire Line
-	4780 6236 4780 6161
-Connection ~ 4780 6161
-Wire Wire Line
-	4780 6161 4928 6161
 $Comp
 L Device:R R2
 U 1 1 5F5760B6
@@ -1283,4 +1260,18 @@ F 3 "~" H 5834 4792 50  0001 C CNN
 	1    5834 4792
 	0    1    1    0   
 $EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5B0C9EAC
+P 4928 6188
+F 0 "#PWR015" H 4928 5938 50  0001 C CNN
+F 1 "GND" H 4928 6038 50  0000 C CNN
+F 2 "" H 4928 6188 50  0001 C CNN
+F 3 "" H 4928 6188 50  0001 C CNN
+	1    4928 6188
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4928 6092 4928 6188
+NoConn ~ 4628 6092
 $EndSCHEMATC
